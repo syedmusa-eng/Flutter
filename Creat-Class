@@ -1,0 +1,21 @@
+//NORMAL MAIN FUNCTION/METHOD LIKE IN ANY PROGRAMMING LANGUAGE...
+void main() {
+
+  #CREATING AN OBJECT REFERENCE OF THE USER CLASS IN THE MAIN...
+  User user1 = User();
+  print(user1.username);
+  print(user1.age);
+  user1.login();
+
+}
+
+
+//Lets create another Class.
+class User{
+  String username = 'Mario';
+  int age = 29;
+  
+  void login(){
+    print('User logged in.');
+  }
+}
