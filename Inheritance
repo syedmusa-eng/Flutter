@@ -1,0 +1,47 @@
+void main() {
+  User user1 = User('Mario', 29);
+  print(user1.username);
+  print(user1.age);
+  user1.login();
+  
+  User user2 = User('Luigi', 26);
+  print(user2.username);
+  print(user2.age);
+  user2.login();
+  
+  
+  //Creating a superUser...
+  SuperUser user3 = SuperUser('Yoshi', 20);
+  print(user3.username);
+  print(user3.age);
+  user3.login();
+  user3.publish();
+
+}
+
+
+//Lets create another Class.
+class User{
+  
+  String username = 'null';
+  int age = 0;
+  
+  User(String username, int age){
+    this.username = username;
+    this.age = age;
+  }
+  
+  void login(){
+    print(username + ' is logged in.');
+  }
+}
+
+//SuperUser is a sub-Class that extends the User Class and inherits all its methods and info...
+class SuperUser extends User{
+  
+  SuperUser(String username, int age) : super(username, age);
+  
+  void publish(){
+    print('Publush update');
+  }
+}
