@@ -1,0 +1,30 @@
+void main() {
+  User user1 = User('Mario', 29);
+  print(user1.username);
+  print(user1.age);
+  user1.login();
+  
+  User user2 = User('Luigi', 26);
+  print(user2.username);
+  print(user2.age);
+  user2.login();
+
+}
+
+
+//Lets create another Class.
+class User{
+  
+  String username = 'null';
+  int age = 0;
+  
+  #CONSTRUCTOR TO SAVE THE MULTIPLE OBJECT PARAMETERS FOR OUR CLASS USER...
+  User(String username, int age){
+    this.username = username;
+    this.age = age;
+  }
+  
+  void login(){
+    print(username + ' is logged in.');
+  }
+}
